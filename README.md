@@ -49,20 +49,35 @@ flutter run
 <key>NSUserNotificationAlertStyle</key>
 <string>alert</string>
 ```
-## Package Used
-```xml
--webview_flutter: ^4.4.0
--http: ^0.13.5
--permission_handler: ^10.4.0
--url_launcher: ^6.1.11
-```
 
-## Folder Structure
-```xml
-lib/
-├── main.dart          # App entry point
-├── home_page.dart     # Main dashboard UI
-├── webview_page.dart  # Web browser implementation
-└── user_data.dart     # API data display
-```
+[//]: # (## Package Used)
+
+[//]: # (```xml)
+
+[//]: # (-webview_flutter: ^4.4.0)
+
+[//]: # (-http: ^0.13.5)
+
+[//]: # (-permission_handler: ^10.4.0)
+
+[//]: # (-url_launcher: ^6.1.11)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (## Folder Structure)
+
+[//]: # (```xml)
+
+[//]: # (lib/)
+
+[//]: # (├── main.dart          # App entry point)
+
+[//]: # (├── home_page.dart     # Main dashboard UI)
+
+[//]: # (├── webview_page.dart  # Web browser implementation)
+
+[//]: # (└── user_data.dart     # API data display)
+
+[//]: # (```)
 
