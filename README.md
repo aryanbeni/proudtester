@@ -37,7 +37,7 @@ flutter run
 ```xml
 <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 <uses-permission android:name="android.permission.INTERNET"/>
-
+```
 ### IOS
 - Add to Info.plist:
 ```xml
@@ -48,7 +48,7 @@ flutter run
 </dict>
 <key>NSUserNotificationAlertStyle</key>
 <string>alert</string>
-
+```
 ## Package Used
 -webview_flutter: ^4.4.0
 -http: ^0.13.5
