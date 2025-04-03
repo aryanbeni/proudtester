@@ -56,11 +56,11 @@ flutter run
 -url_launcher: ^6.1.11
 
 ## Folder Structure
+```xml
 lib/
 ├── main.dart          # App entry point
 ├── home_page.dart     # Main dashboard UI
 ├── webview_page.dart  # Web browser implementation
 └── user_data.dart     # API data display
-
-
+```
 
