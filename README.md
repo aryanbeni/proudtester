@@ -2,7 +2,7 @@
 
 A feature-rich Flutter application with notification controls, web browsing, user data display, and interactive elements.
 
-![App Screenshot](screenshot.png) <!-- Replace with your actual screenshot -->
+[//]: # (![App Screenshot]&#40;screenshot.png&#41; <!-- Replace with your actual screenshot -->)
 
 ## Features
 
@@ -28,3 +28,38 @@ git clone https://github.com/aryanbeni/proudtester.git
 cd automation-app
 flutter pub get
 flutter run
+
+## Configuration
+
+### Android
+- Add to AndroidManifest.xml:
+```xml
+<uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+<uses-permission android:name="android.permission.INTERNET"/>
+
+### IOS
+- Add to Info.plist:
+```xml
+<key>NSAppTransportSecurity</key>
+<dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+</dict>
+<key>NSUserNotificationAlertStyle</key>
+<string>alert</string>
+
+## Package Used
+-webview_flutter: ^4.4.0
+-http: ^0.13.5
+-permission_handler: ^10.4.0
+-url_launcher: ^6.1.11
+
+## Folder Structure
+lib/
+├── main.dart          # App entry point
+├── home_page.dart     # Main dashboard UI
+├── webview_page.dart  # Web browser implementation
+└── user_data.dart     # API data display
+
+
+
