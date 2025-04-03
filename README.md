@@ -1,21 +1,30 @@
-# proudtester
+# Automation Dashboard App
 
-Testing App for Automation Testing
+A feature-rich Flutter application with notification controls, web browsing, user data display, and interactive elements.
 
-## Getting Started
+![App Screenshot](screenshot.png) <!-- Replace with your actual screenshot -->
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- **Notification Management**: Request and handle notification permissions
+- **Integrated Web Browser**: In-app web browsing with WebView
+- **User Data Display**: Fetch and display JSON API data
+- **Interactive UI**: Animated cards with gradient backgrounds
+- **Responsive Design**: Works on mobile and tablet devices
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Technical Stack
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# proudtester
-# proudtester
-# proudtester
-# proudtester
-# proudtester
+- Flutter 3.x
+- Dart 3.x
+- Stateful Widgets
+- WebView (webview_flutter)
+- HTTP Requests (http)
+- Permission Handling (permission_handler)
+
+## Installation
+
+```bash
+git clone https://github.com/yourusername/automation-app.git
+cd automation-app
+flutter pub get
+flutter run
