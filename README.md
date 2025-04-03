@@ -28,6 +28,7 @@ git clone https://github.com/aryanbeni/proudtester.git
 cd automation-app
 flutter pub get
 flutter run
+```
 
 ## Configuration
 
