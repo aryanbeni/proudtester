@@ -24,7 +24,7 @@ A feature-rich Flutter application with notification controls, web browsing, use
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/automation-app.git
+git clone https://github.com/aryanbeni/proudtester.git
 cd automation-app
 flutter pub get
 flutter run
