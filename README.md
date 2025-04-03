@@ -50,10 +50,12 @@ flutter run
 <string>alert</string>
 ```
 ## Package Used
+```xml
 -webview_flutter: ^4.4.0
 -http: ^0.13.5
 -permission_handler: ^10.4.0
 -url_launcher: ^6.1.11
+```
 
 ## Folder Structure
 ```xml
