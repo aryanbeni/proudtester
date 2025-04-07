@@ -41,7 +41,8 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               children: [
                 const SizedBox(height: 10),
-                const Icon(Icons.emoji_emotions_outlined,
+                const Icon(
+                  Icons.emoji_emotions_outlined,
                   size: 50,
                   color: Colors.white,
                 ),
@@ -117,12 +118,12 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget _buildFeatureCard(
-      BuildContext context, {
-        required IconData icon,
-        required String title,
-        required Color color,
-        required VoidCallback onTap,
-      }) {
+    BuildContext context, {
+    required IconData icon,
+    required String title,
+    required Color color,
+    required VoidCallback onTap,
+  }) {
     return Expanded(
       child: GestureDetector(
         onTap: onTap,
@@ -263,4 +264,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-

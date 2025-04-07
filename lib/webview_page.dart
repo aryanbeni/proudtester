@@ -29,7 +29,7 @@ class _WebViewPageState extends State<WebViewPage> {
     }
 
     final WebViewController controller =
-    WebViewController.fromPlatformCreationParams(params);
+        WebViewController.fromPlatformCreationParams(params);
     // #enddocregion platform_features
 
     controller

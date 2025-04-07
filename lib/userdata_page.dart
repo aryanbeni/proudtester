@@ -24,7 +24,8 @@ class _UserDataPageState extends State<UserDataPage> {
 
   Future<void> fetchUsers() async {
     try {
-      final response = await http.get(Uri.parse('https://jsonplaceholder.typicode.com/users'));
+      final response = await http
+          .get(Uri.parse('https://jsonplaceholder.typicode.com/users'));
       if (response.statusCode == 200) {
         setState(() {
           users = json.decode(response.body);
@@ -57,7 +58,10 @@ class _UserDataPageState extends State<UserDataPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('User Data',style: TextStyle(color: Colors.white),),
+        title: const Text(
+          'User Data',
+          style: TextStyle(color: Colors.white),
+        ),
         backgroundColor: Colors.blue.shade900,
         elevation: 0,
       ),
@@ -74,74 +78,74 @@ class _UserDataPageState extends State<UserDataPage> {
         ),
         child: isLoading
             ? const Center(
-          child: CircularProgressIndicator(
-            valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-          ),
-        )
-            : error.isNotEmpty
-            ? Center(
-          child: Text(
-            error,
-            style: const TextStyle(color: Colors.white),
-          ),
-        )
-            : RefreshIndicator(
-          onRefresh: fetchUsers,
-          backgroundColor: Colors.blue.shade900,
-          color: Colors.white,
-          child: ListView.builder(
-            itemCount: users.length,
-            itemBuilder: (context, index) {
-              final user = users[index];
-              return Padding(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 16.0, vertical: 8.0),
-                child: Card(
-                  elevation: 4,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: _getRandomColor(),
-                      child: Text(
-                        user['name'][0],
-                        style: const TextStyle(color: Colors.white),
-                      ),
-                    ),
-                    title: Text(
-                      user['name'],
-                      style: const TextStyle(
-                          fontWeight: FontWeight.bold),
-                    ),
-                    subtitle: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(user['email']),
-                        const SizedBox(height: 4),
-                        Text(
-                          user['phone'],
-                          style: TextStyle(
-                              color: Colors.grey.shade600),
-                        ),
-                      ],
-                    ),
-                    trailing: Icon(
-                      Icons.arrow_forward_ios,
-                      size: 16,
-                      color: Colors.grey.shade400,
-                    ),
-                    contentPadding: const EdgeInsets.symmetric(
-                        horizontal: 16.0, vertical: 8.0),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                  ),
+                child: CircularProgressIndicator(
+                  valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
                 ),
-              );
-            },
-          ),
-        ),
+              )
+            : error.isNotEmpty
+                ? Center(
+                    child: Text(
+                      error,
+                      style: const TextStyle(color: Colors.white),
+                    ),
+                  )
+                : RefreshIndicator(
+                    onRefresh: fetchUsers,
+                    backgroundColor: Colors.blue.shade900,
+                    color: Colors.white,
+                    child: ListView.builder(
+                      itemCount: users.length,
+                      itemBuilder: (context, index) {
+                        final user = users[index];
+                        return Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 16.0, vertical: 8.0),
+                          child: Card(
+                            elevation: 4,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: ListTile(
+                              leading: CircleAvatar(
+                                backgroundColor: _getRandomColor(),
+                                child: Text(
+                                  user['name'][0],
+                                  style: const TextStyle(color: Colors.white),
+                                ),
+                              ),
+                              title: Text(
+                                user['name'],
+                                style: const TextStyle(
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              subtitle: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(user['email']),
+                                  const SizedBox(height: 4),
+                                  Text(
+                                    user['phone'],
+                                    style:
+                                        TextStyle(color: Colors.grey.shade600),
+                                  ),
+                                ],
+                              ),
+                              trailing: Icon(
+                                Icons.arrow_forward_ios,
+                                size: 16,
+                                color: Colors.grey.shade400,
+                              ),
+                              contentPadding: const EdgeInsets.symmetric(
+                                  horizontal: 16.0, vertical: 8.0),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
       ),
     );
   }

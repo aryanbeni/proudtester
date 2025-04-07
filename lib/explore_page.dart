@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class ExplorePage extends StatefulWidget {
   const ExplorePage({super.key});
 
@@ -27,19 +28,22 @@ class _ExplorePageState extends State<ExplorePage> {
           ],
         ),
       ),
-      child: Scaffold(backgroundColor: Colors.transparent,
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
         body: SafeArea(
           child: SingleChildScrollView(
             padding: const EdgeInsets.all(16.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Center(
-                  child: Text('Testing Progress',style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
+                const Center(
+                  child: Text(
+                    'Testing Progress',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
                 const SizedBox(height: 10),
@@ -78,7 +82,7 @@ class _ExplorePageState extends State<ExplorePage> {
                         onChanged: (value) {
                           setState(() {
                             _automationTestingStarted = value ?? false;
-          
+
                             // If automation testing is marked as not started,
                             // reset all sub-tasks
                             if (value == false) {
@@ -90,7 +94,7 @@ class _ExplorePageState extends State<ExplorePage> {
                         },
                         controlAffinity: ListTileControlAffinity.leading,
                       ),
-          
+
                       // Only show sub-tasks if automation testing is started
                       if (_automationTestingStarted) ...[
                         const Divider(height: 1),
@@ -123,7 +127,8 @@ class _ExplorePageState extends State<ExplorePage> {
                         Padding(
                           padding: const EdgeInsets.only(left: 16.0),
                           child: CheckboxListTile(
-                            title: const Text('Tested Explore Page Particulars'),
+                            title:
+                                const Text('Tested Explore Page Particulars'),
                             value: _explorePageTested,
                             onChanged: (value) {
                               setState(() {
@@ -147,7 +152,8 @@ class _ExplorePageState extends State<ExplorePage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text('Automation Testing Progress',
-                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 16)),
                           const SizedBox(height: 10),
                           LinearProgressIndicator(
                             value: (_signupPageTested ? 1 : 0) +

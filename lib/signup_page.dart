@@ -89,7 +89,8 @@ class _SignUpPageState extends State<SignUpPage> {
             child: Container(
               width: double.infinity,
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 32),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 24.0, vertical: 32),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -135,16 +136,18 @@ class _SignUpPageState extends State<SignUpPage> {
                           hintStyle: TextStyle(color: Colors.grey.shade500),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(12),
-                            borderSide: const BorderSide(color: Colors.blue, width: 2),
+                            borderSide:
+                                const BorderSide(color: Colors.blue, width: 2),
                           ),
-                          prefixIcon: Icon(Icons.phone_android, color: Colors.grey.shade600),
+                          prefixIcon: Icon(Icons.phone_android,
+                              color: Colors.grey.shade600),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(12),
                             borderSide: BorderSide(color: Colors.grey.shade300),
                           ),
                           counterText: '',
                           errorText: _mobileController.text.isNotEmpty &&
-                              !_isValidMobile(_mobileController.text)
+                                  !_isValidMobile(_mobileController.text)
                               ? 'Enter valid 10-digit number (1st digit > 5)'
                               : null,
                           errorStyle: TextStyle(color: Colors.orange.shade200),
@@ -183,12 +186,16 @@ class _SignUpPageState extends State<SignUpPage> {
                           hintStyle: TextStyle(color: Colors.grey.shade500),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(12),
-                            borderSide: const BorderSide(color: Colors.blue, width: 2),
+                            borderSide:
+                                const BorderSide(color: Colors.blue, width: 2),
                           ),
-                          prefixIcon: Icon(Icons.lock_outline, color: Colors.grey.shade600),
+                          prefixIcon: Icon(Icons.lock_outline,
+                              color: Colors.grey.shade600),
                           suffixIcon: IconButton(
                             icon: Icon(
-                              passwordVisible ? Icons.visibility : Icons.visibility_off,
+                              passwordVisible
+                                  ? Icons.visibility
+                                  : Icons.visibility_off,
                               color: Colors.grey.shade600,
                             ),
                             onPressed: () {
@@ -202,7 +209,7 @@ class _SignUpPageState extends State<SignUpPage> {
                             borderSide: BorderSide(color: Colors.grey.shade300),
                           ),
                           errorText: _passwordController.text.isNotEmpty &&
-                              !_isValidPassword(_passwordController.text)
+                                  !_isValidPassword(_passwordController.text)
                               ? 'Requires: 8+ chars, 1 uppercase, 1 lowercase, 1 digit, 1 special char'
                               : null,
                           errorStyle: TextStyle(color: Colors.orange.shade200),
@@ -230,18 +237,20 @@ class _SignUpPageState extends State<SignUpPage> {
                           borderRadius: BorderRadius.circular(12),
                           boxShadow: _isSignUpEnabled
                               ? [
-                            BoxShadow(
-                              color: Colors.blueAccent.withOpacity(0.4),
-                              blurRadius: 12,
-                              spreadRadius: 2,
-                              offset: const Offset(0, 4),
-                            )
-                          ]
+                                  BoxShadow(
+                                    color: Colors.blueAccent.withOpacity(0.4),
+                                    blurRadius: 12,
+                                    spreadRadius: 2,
+                                    offset: const Offset(0, 4),
+                                  )
+                                ]
                               : null,
                         ),
                         child: Material(
                           borderRadius: BorderRadius.circular(12),
-                          color: _isSignUpEnabled ? Colors.white : Colors.white.withOpacity(0.5),
+                          color: _isSignUpEnabled
+                              ? Colors.white
+                              : Colors.white.withOpacity(0.5),
                           child: InkWell(
                             borderRadius: BorderRadius.circular(12),
                             onTap: _isSignUpEnabled ? _navigateToHome : null,
@@ -251,22 +260,26 @@ class _SignUpPageState extends State<SignUpPage> {
                               child: Center(
                                 child: _isLoading
                                     ? const SizedBox(
-                                  height: 24,
-                                  width: 24,
-                                  child: CircularProgressIndicator(
-                                    strokeWidth: 2,
-                                    valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
-                                  ),
-                                )
+                                        height: 24,
+                                        width: 24,
+                                        child: CircularProgressIndicator(
+                                          strokeWidth: 2,
+                                          valueColor:
+                                              AlwaysStoppedAnimation<Color>(
+                                                  Colors.blue),
+                                        ),
+                                      )
                                     : Text(
-                                  'Login',
-                                  style: TextStyle(
-                                    color: _isSignUpEnabled ? Colors.blue.shade900 : Colors.grey,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 18,
-                                    letterSpacing: 0.5,
-                                  ),
-                                ),
+                                        'Login',
+                                        style: TextStyle(
+                                          color: _isSignUpEnabled
+                                              ? Colors.blue.shade900
+                                              : Colors.grey,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 18,
+                                          letterSpacing: 0.5,
+                                        ),
+                                      ),
                               ),
                             ),
                           ),
@@ -285,12 +298,12 @@ class _SignUpPageState extends State<SignUpPage> {
                           ),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
-                            Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const MainTabPage(),
-                              ),
-                            );
+                              Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const MainTabPage(),
+                                ),
+                              );
                             },
                           children: const [
                             TextSpan(
