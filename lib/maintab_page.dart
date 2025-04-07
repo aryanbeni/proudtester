@@ -14,8 +14,8 @@ class _MainTabPageState extends State<MainTabPage> {
   int _currentIndex = 0;
 
   final List<Widget> _pages = [
-    const HomePage(), // Your existing home page
-    const ExplorePage(), // New explore page
+    const HomePage(),
+    const ExplorePage(),
   ];
 
   @override

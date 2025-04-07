@@ -72,7 +72,6 @@ class _ExplorePageState extends State<ExplorePage> {
                   elevation: 2,
                   child: Column(
                     children: [
-                      // Main Automation Testing Task
                       CheckboxListTile(
                         title: const Text(
                           'Started Automation Testing',
@@ -82,9 +81,6 @@ class _ExplorePageState extends State<ExplorePage> {
                         onChanged: (value) {
                           setState(() {
                             _automationTestingStarted = value ?? false;
-
-                            // If automation testing is marked as not started,
-                            // reset all sub-tasks
                             if (value == false) {
                               _signupPageTested = false;
                               _homePageTested = false;
@@ -95,7 +91,6 @@ class _ExplorePageState extends State<ExplorePage> {
                         controlAffinity: ListTileControlAffinity.leading,
                       ),
 
-                      // Only show sub-tasks if automation testing is started
                       if (_automationTestingStarted) ...[
                         const Divider(height: 1),
                         Padding(
