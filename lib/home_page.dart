@@ -40,19 +40,20 @@ class _HomePageState extends State<HomePage> {
           child: SafeArea(
             child: Column(
               children: [
-                const SizedBox(height: 20),
+                const SizedBox(height: 10),
                 const Icon(Icons.emoji_emotions_outlined,
                   size: 50,
                   color: Colors.white,
                 ),
                 const SizedBox(height: 8),
                 const Text(
-                  'Welcome to the Field of Automation!',
+                  'Welcome to the ProudTester\nwhere you can do Automation Testing\nin your way!',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
+                  textAlign: TextAlign.center,
                 ),
                 const Spacer(),
                 Padding(
