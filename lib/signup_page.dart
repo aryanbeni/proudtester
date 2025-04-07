@@ -1,6 +1,7 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'home_page.dart';
+import 'package:proudtester/maintab_page.dart';
 
 class SignUpPage extends StatefulWidget {
   @override
@@ -50,7 +51,7 @@ class _SignUpPageState extends State<SignUpPage> {
         context,
         PageRouteBuilder(
           transitionDuration: const Duration(milliseconds: 500),
-          pageBuilder: (_, __, ___) => const HomePage(),
+          pageBuilder: (_, __, ___) => const MainTabPage(),
           transitionsBuilder: (_, animation, __, child) {
             return FadeTransition(
               opacity: animation,
@@ -282,6 +283,15 @@ class _SignUpPageState extends State<SignUpPage> {
                             color: Colors.white.withOpacity(0.7),
                             fontSize: 12,
                           ),
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const MainTabPage(),
+                              ),
+                            );
+                            },
                           children: const [
                             TextSpan(
                               text: 'Terms',
